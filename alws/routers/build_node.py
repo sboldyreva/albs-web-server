@@ -46,7 +46,7 @@ async def get_task(
         'id': task.id,
         'arch': task.arch,
         'ref': task.ref,
-        'platform': build_node_schema.TaskPlatform.from_orm(task.platform),
+        'platform': build_task_schema.TaskPlatform.from_orm(task.platform),
         'repositories': [],
         'created_by': {
             'name': task.build.user.username,
